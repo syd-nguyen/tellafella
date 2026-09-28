@@ -195,6 +195,7 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=598596593]
+scale = Vector2(8, 8)
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=791025371]
