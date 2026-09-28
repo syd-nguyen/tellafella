@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5ao4wk8mk3y0"]
 
 [ext_resource type="Texture2D" uid="uid://dj0qpnotsdx2d" path="res://images/characters/player.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://di4ivo606i85h" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -194,7 +195,9 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=598596593]
+script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=791025371]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vwy20")
 animation = &"run right"
