@@ -202,3 +202,7 @@ script = ExtResource("1_g2els")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vwy20")
 animation = &"run right"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=847353627]
+limit_left = 0
+limit_top = 0
