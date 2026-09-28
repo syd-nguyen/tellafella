@@ -194,6 +194,9 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
+size = Vector2(20, 21.125)
+
 [node name="player" type="CharacterBody2D" unique_id=598596593]
 scale = Vector2(8, 8)
 script = ExtResource("1_g2els")
@@ -206,3 +209,12 @@ animation = &"run right"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=847353627]
 limit_left = 0
 limit_top = 0
+
+[node name="hitbox" type="Area2D" parent="." unique_id=215352510]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1006803057]
+position = Vector2(-0.1875, 1.9375)
+shape = SubResource("RectangleShape2D_qhqgy")
+
+[connection signal="area_shape_entered" from="hitbox" to="." method="_on_hitbox_area_shape_entered"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

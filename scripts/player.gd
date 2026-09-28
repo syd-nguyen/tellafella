@@ -36,3 +36,14 @@ func play_animation(prefix: String, direction: Vector2) -> void:
 		#animated_sprite_2d.play(prefix + " up")
 	#elif direction.y > 0:
 		#animated_sprite_2d.play(prefix + " down")
+
+# -------------------------
+# collision detection
+# -------------------------
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_hitbox_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	print("hit")
